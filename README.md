@@ -44,3 +44,7 @@ Users agree to indemnify, defend, and hold the repository's author harmless from
 The author reserves the right to alter, update, or delete any content, information, or features in this repository at any time without prior notice. Users are responsible for regularly reviewing the content and any modifications to this repository.
 
 By using this repository or any associated code, you are agreeing to these terms. The author is not responsible for any copies, forks, or reuploads made by other users. This is the author's only account and repository. To prevent impersonation or irresponsible actions, you are advised to comply with the GNU GPL license this Repository operates under.
+
+<div align="center">
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=BankkRoll.gpt4free-nextjs&left_color=green&right_color=blue" alt="visitors" width="100"/>
+</div>
