@@ -27,6 +27,20 @@ Here's an explanation of the key files and directories related to this project:
 | `utils/emailFactory.ts` | Interacts with temporary email services. |
 
 
+- [ ] Fix tls to https/https since nextjs wont support it directly
+- [ ] Finish implementation of all models
+- [ ] UI/UX Designing
+
+## Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Commit your Changes
+3. Push to the Branch
+4. Open a Pull Request
+
+---
 
 # Legal Notice
 ## Important Points to Note:
