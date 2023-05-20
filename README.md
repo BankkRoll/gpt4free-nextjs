@@ -3,6 +3,11 @@ This repository and its content are strictly provided for educational purposes. 
 
 This repository is not linked to or sponsored by the providers of the APIs found within. This project is simply a small personal project designed for educational use. Website owners can reach out to me for security enhancement or to request their site's removal from this repository.
 
+## IN PROGRESS 🔧
+- [ ] Fix tls to https/https since nextjs wont support it directly
+- [ ] Finish implementation of all models
+- [ ] UI/UX Designing
+
 Here's an explanation of the key files and directories related to this project:
 
 | File/Directory | Description |
@@ -26,10 +31,6 @@ Here's an explanation of the key files and directories related to this project:
 | `utils/puppeteer.ts` | Manages puppeteer instances for web scraping. |
 | `utils/emailFactory.ts` | Interacts with temporary email services. |
 
-
-- [ ] Fix tls to https/https since nextjs wont support it directly
-- [ ] Finish implementation of all models
-- [ ] UI/UX Designing
 
 ## Contributing
 
