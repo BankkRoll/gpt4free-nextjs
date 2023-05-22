@@ -1,7 +1,8 @@
 // utils/puppeteer.ts
-import puppeteer, { Browser, Page, PuppeteerLaunchOptions } from "puppeteer";
+import puppeteer, {Browser, Page, PuppeteerLaunchOptions} from "puppeteer";
 import fs from 'fs';
 import path from "path";
+import run from "node:test";
 
 const runPath = path.join(__dirname, 'run');
 
@@ -11,15 +12,13 @@ export class FreeBrowser {
     private urls: Set<string> = new Set<string>();
     private pages: Record<string, Page> = {};
     private readonly id: string;
-    private readonly runPath: string;
 
-    constructor(id: string, runPath: string, options?: PuppeteerLaunchOptions) {
+    constructor(id: string, options?: PuppeteerLaunchOptions) {
         this.options = {
             userDataDir: path.join(runPath, id),
             ...options
         };
         this.id = id;
-        this.runPath = runPath;
     }
 
     public async init() {
@@ -46,24 +45,22 @@ export class FreeBrowser {
 class FreeBrowserPool {
     private size: number = 0;
     private readonly pool: FreeBrowser[];
-    private readonly runPath: string;
 
-    constructor(runPath: string) {
+    constructor() {
         this.pool = [];
-        this.runPath = runPath;
     }
 
     public async init(size: number, debug: boolean) {
         console.log(`browser pool init size:${size}`)
-        if (!fs.existsSync(this.runPath)) {
-            fs.mkdirSync(this.runPath);
+        if (!fs.existsSync(runPath)) {
+            fs.mkdirSync(runPath);
         }
         this.size = size;
         const options: PuppeteerLaunchOptions = {
             headless: !debug,
         };
         for (let i = 0; i < size; i++) {
-            const browser = new FreeBrowser(`${i}`, this.runPath, options);
+            const browser = new FreeBrowser(`${i}`, options);
             await browser.init();
             this.pool.push(browser);
         }
@@ -74,4 +71,4 @@ class FreeBrowserPool {
     }
 }
 
-export const freeBrowserPool = new FreeBrowserPool(runPath);
+export const freeBrowserPool = new FreeBrowserPool();
