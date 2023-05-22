@@ -1,6 +1,6 @@
 import {Chat, ChatOptions, Request, Response, ResponseStream} from "../base";
 import {Page} from "puppeteer";
-import {FreeBrowser, freeBrowserPool} from "../../utils/puppeteer";
+import {FreeBrowser, freeBrowserPool} from "../../pool/puppeteer";
 import {CreateEmail, TempEmailType, TempMailMessage} from "../../utils/emailFactory";
 import {CreateTlsProxy} from "../../utils/proxyAgent";
 import {PassThrough} from "stream";
