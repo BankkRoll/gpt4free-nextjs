@@ -16,13 +16,14 @@ Here's an explanation of the key files and directories related to this project:
 | `docker-compose.yaml`, `Dockerfile` | Used to containerize the application using Docker. They define the environment and the steps to build the Docker image. |
 | Model Definitions | -------------------------------------------- |
 | `model` | Contains the data models for various services. |
+| `model/aidream` | Data model for the `aidream` service. |
 | `model/forefront` | Data model for the `forefront` service. |
 | `model/phind` | Data model for the `phind` service. |
 | `model/you` | Data model for the `you` service. |
 | Next.js Pages | -------------------------------------------- |
 | `src/pages` | Contains the pages of the Next.js application. The `index.tsx` file is the entry point, `_app.tsx` is for initializing pages, and `_document.tsx` is for augmenting the HTML and body tags. |
-| `src/pages/ask.ts` | Handles API calls related to asking a question or making a request to the services. |
-| `src/pages/stream.ts` | Handles streaming or real-time data requests. |
+| `src/pages/api/ask.ts` | Handles API calls related to asking a question or making a request to the services. |
+| `src/pages/api/stream.ts` | Handles streaming or real-time data requests. |
 | Styling | -------------------------------------------- |
 | `src/styles` | Contains global styles for the application. |
 | Utility Functions | -------------------------------------------- |
